@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="lt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Italy Photos</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <header id="header">
+        <img src="./italy.jpg" alt="Italy boot" height="80" />Italy
+      </header>
+
+      <div class="galerija">
+        <div>
+          <img
+            alt="Rome, Vatican Gardens"
+            onmouseover="aprasymas(this.alt)"
+            onMouseOut="aprasymas()"
+            ondblclick="bigview(this)"
+            src="./VaticanGardens.jpg"
+            height="90"
+          />
+          <div class="tip"></div>
+        </div>
+        <div>
+          <img
+            alt="Rome, Ostia Antica"
+            onmouseover="aprasymas(this.alt)"
+            onMouseOut="aprasymas()"
+            ondblclick="bigview(this)"
+            src="./OstiaAntica.jpg"
+            height="90"
+          />
+          <div class="tip"></div>
+        </div>
+        <div>
+          <img
+            alt="Tivoli, Villa Adriana"
+            onmouseover="aprasymas(this.alt)"
+            onMouseOut="aprasymas()"
+            ondblclick="bigview(this)"
+            src="./Tivoli.jpg"
+            height="90"
+          />
+          <div class="tip"></div>
+        </div>
+        <div>
+          <img
+            alt="Venice canals"
+            onmouseover="aprasymas(this.alt)"
+            onMouseOut="aprasymas()"
+            ondblclick="bigview(this)"
+            src="./Venezia.jpg"
+            height="90"
+          />
+          <div class="tip"></div>
+        </div>
+      </div>
+
+      <div class="side">
+        Parinkite spalva<input id="spalva" type="color" value="#008000" />
+        <br />
+        <br />
+        <input type="radio" name="hfswitch" value="header" />Header<br />
+        <input type="radio" name="hfswitch" value="footer" />Footer<br />
+        <button onclick="spalva();">Pritaikyti</button>
+        <br />
+        <hr />
+        <br />
+        Paveikslu galerijoje parametrai<br /><br />
+        Plotis: <input class="size" type="text" /><br /><br />
+        Aukstis: <input class="size" type="text" /><br /><br />
+        <button onclick="pritaikyti();">Pritaikyti</button><br />
+        <hr />
+        Rodyti aprasyma:<input id="check" type="checkbox" />
+      </div>
+
+      <div class="view"></div>
+
+      <div class="info">
+        Paveikslo aprasymas<br /><br />
+        <input type="text" id="info" /><br />
+        <button id="issaugoti">Issaugoti aprasyma</button><br />
+        <br />
+        <button id="trinti">Trinti is galerijos</button><br />
+      </div>
+
+      <footer id="footer"></footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
